@@ -1,3 +1,7 @@
+# 0.3.1
+
+Fix registration cookbook.
+
 # 0.3.0
 
 Remove awscli direct dependency, as it is deprecated and now causing problems with python.

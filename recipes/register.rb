@@ -22,7 +22,7 @@ mapped_elbs.each do | elb_name |
   execute "register_with_#{elb_name}" do
     # http://docs.aws.amazon.com/cli/latest/reference/elb/register-instances-with-load-balancer.html
 
-    cmd << "aws "\
+    cmd = "aws "\
       "--region #{node[:opsworks][:instance][:region]} "\
       "elb register-instances-with-load-balancer "\
       "--load-balancer-name #{elb_name} "\
@@ -36,7 +36,7 @@ mapped_elbsv2.each do | target_group_arn |
   execute "register_with_#{target_group_arn}" do
     # http://docs.aws.amazon.com/cli/latest/reference/elbv2/register-targets.html
 
-    cmd << "aws "\
+    cmd = "aws "\
       "--region #{node[:opsworks][:instance][:region]} "\
       "elbv2 register-targets "\
       "--target-group-arn #{target_group_arn} "\
