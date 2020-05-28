@@ -1,3 +1,7 @@
+# 0.3.0
+
+Remove awscli direct dependency, as it is deprecated and now causing problems with python.
+
 # 0.2.1
 
 Handle unspecified data bag items gracefully instead of raising an uncaught exception.
